@@ -8,6 +8,9 @@ import { Message } from '@fullstack-monorepo/api-interfaces';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
   constructor(private http: HttpClient) {}
+
+  title = 'Tour of Heroes';
+
+  hello$ = this.http.get<Message>('/api/hello');
 }
