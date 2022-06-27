@@ -1,10 +1,17 @@
 # FullstackMonorepo
 
-## 🔎 Quick Start & Documentation
+### This is the [Angular Tour of Heroes tutorial](https://angular.io/tutorial), but cranked up a notch. I've paired it with [NestJS](https://nestjs.com/) and [MongoDB](https://www.mongodb.com/). The client and api are separate apps but live together in this [monorepo](https://monorepo.tools/), managed by [Nx](https://nx.dev). [TypeScript](https://www.typescriptlang.org/) and [RxJS](https://rxjs.dev/) included. Have fun :)
+
+<br>
+
+## 🔎 Quick Start
+
+<br>
 
 ### Start apps
 
 ```bash
+$ npm -i
 $ nx serve client
 $ nx serve api
 ```
@@ -22,5 +29,3 @@ localhost:3333 -> api
 $ nx test client
 $ nx test api
 ```
-
-This project was generated using [Nx](https://nx.dev).
