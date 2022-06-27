@@ -6,10 +6,15 @@
 
 ## 🔎 Quick Start
 
-### Start apps
+### Install
 
 ```bash
 $ npm -i
+```
+
+### Start apps
+
+```bash
 $ nx serve client
 $ nx serve api
 ```
