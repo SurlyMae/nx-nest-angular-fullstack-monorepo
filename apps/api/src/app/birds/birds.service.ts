@@ -16,7 +16,7 @@ export class BirdsService {
 
   updateBird(updateBirdDto: BirdDto): Observable<Bird> {
     return from(
-      this.birdModel.findOneAndReplace({ id: updateBirdDto.id }, updateBirdDto)
+      this.birdModel.findOneAndReplace({ _id: updateBirdDto.id }, updateBirdDto)
     );
   }
 
@@ -24,22 +24,22 @@ export class BirdsService {
     return from(this.birdModel.find().exec());
   }
 
-  findOne(id: number): Observable<Bird> {
-    return from(this.birdModel.findOne({ id }));
+  findOne(id: string): Observable<Bird> {
+    return from(this.birdModel.findOne({ _id: id }));
   }
 
   deleteBird(id: number) {
-    return from(this.birdModel.deleteOne({ id }));
+    return from(this.birdModel.deleteOne({ _id: id }));
   }
 
   createBirdData(): Observable<Bird[]> {
     const birds: Bird[] = [
-      { id: 12, name: 'goldfinch' },
-      { id: 13, name: 'sparrow' },
-      { id: 14, name: 'robin' },
-      { id: 15, name: 'house finch' },
+      { name: 'goldfinch' },
+      { name: 'sparrow' },
+      { name: 'robin' },
+      { name: 'house finch' },
     ];
-    return from(this.birdModel.create(...birds));
+    return from(this.birdModel.insertMany(birds));
   }
 
   deleteAllBirds() {

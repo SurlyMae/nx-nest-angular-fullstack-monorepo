@@ -3,6 +3,6 @@ export interface Message {
 }
 
 export interface Bird {
-  id: number;
+  id?: string;
   name: string;
 }
