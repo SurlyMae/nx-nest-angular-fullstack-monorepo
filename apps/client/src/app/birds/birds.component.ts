@@ -32,6 +32,8 @@ export class BirdsComponent implements OnInit {
 
   delete(bird: Bird): void {
     this.birds = this.birds.filter((h) => h !== bird);
-    this.birdService.deleteBird(bird.id).subscribe();
+    if (bird.id) {
+      this.birdService.deleteBird(bird.id).subscribe();
+    }
   }
 }

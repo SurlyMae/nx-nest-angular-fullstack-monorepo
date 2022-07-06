@@ -14,7 +14,7 @@
 <ul class="birds">
   <li *ngFor="let bird of birds">
     <a routerLink="/detail/{{ bird.id }}">
-      <span class="badge">{{ bird.id }}</span> {{ bird.name }}
+      {{ bird.name }}
     </a>
     <button
       type="button"

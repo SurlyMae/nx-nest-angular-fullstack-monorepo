@@ -23,7 +23,7 @@ export class BirdService {
     );
   }
 
-  getBird(id: number): Observable<Bird> {
+  getBird(id: string): Observable<Bird> {
     const url = `${this.birdsUrl}/${id}`;
     return this.http.get<Bird>(url).pipe(
       tap(() => this.log(`fetched bird id=${id}`)),
@@ -45,7 +45,7 @@ export class BirdService {
     );
   }
 
-  deleteBird(id: number): Observable<Bird> {
+  deleteBird(id: string): Observable<Bird> {
     const url = `${this.birdsUrl}/${id}`;
 
     return this.http.delete<Bird>(url, this.httpOptions).pipe(

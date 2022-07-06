@@ -23,8 +23,10 @@ export class BirdDetailComponent implements OnInit {
   }
 
   getBird(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.birdService.getBird(id).subscribe((bird) => (this.bird = bird));
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.birdService.getBird(id).subscribe((bird) => (this.bird = bird));
+    }
   }
 
   goBack(): void {

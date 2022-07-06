@@ -26,7 +26,7 @@ export class BirdsController {
   }
 
   @Get(':id')
-  getBird(@Param('id') id: number): Observable<Bird> {
+  getBird(@Param('id') id: string): Observable<Bird> {
     return this.birdsService.findOne(id);
   }
 
