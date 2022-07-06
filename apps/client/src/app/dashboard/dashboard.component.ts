@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '@fullstack-monorepo/api-interfaces';
-import { HeroService } from '../hero.service';
+import { Bird } from '@fullstack-monorepo/api-interfaces';
+import { BirdService } from '../bird.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,17 +8,17 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+  birds: Bird[] = [];
 
-  constructor(private heroService: HeroService) {}
+  constructor(private birdService: BirdService) {}
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getBirds();
   }
 
-  getHeroes(): void {
-    this.heroService
-      .getHeroes()
-      .subscribe((heroes) => (this.heroes = heroes.slice(1, 5)));
+  getBirds(): void {
+    this.birdService
+      .getBirds()
+      .subscribe((birds) => (this.birds = birds.slice(1, 5)));
   }
 }
