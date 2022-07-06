@@ -1,8 +1,8 @@
-<h2>Top Heroes</h2>
-<div class="heroes-menu">
-  <a *ngFor="let hero of heroes" routerLink="/detail/{{ hero.id }}">
-    {{ hero.name }}
+<h2>Top Birds</h2>
+<div class="birds-menu">
+  <a *ngFor="let bird of birds" routerLink="/detail/{{ bird.id }}">
+    {{ bird.name }}
   </a>
 </div>
 
-<app-hero-search></app-hero-search>
+<app-bird-search></app-bird-search>

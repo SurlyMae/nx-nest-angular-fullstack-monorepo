@@ -2,7 +2,7 @@ export interface Message {
   message: string;
 }
 
-export interface Hero {
+export interface Bird {
   id: number;
   name: string;
 }

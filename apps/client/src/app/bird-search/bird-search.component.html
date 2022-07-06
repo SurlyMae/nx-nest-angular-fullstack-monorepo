@@ -1,5 +1,5 @@
 <div id="search-component">
-  <label for="search-box">Hero search</label>
+  <label for="search-box">Bird search</label>
   <input
     type="text"
     #searchBox
@@ -7,9 +7,9 @@
     (input)="search(searchBox.value)"
   />
   <ul class="search-result">
-    <li *ngFor="let hero of heroes$ | async">
-      <a routerLink="/detail/{{ hero.id }}">
-        {{ hero.name }}
+    <li *ngFor="let bird of birds$ | async">
+      <a routerLink="/detail/{{ bird.id }}">
+        {{ bird.name }}
       </a>
     </li>
   </ul>
