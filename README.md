@@ -1,6 +1,6 @@
 # FullstackMonorepo
 
-### [Monorepo](https://monorepo.tools/) Starter Kit
+### [Monorepo](https://monorepo.tools/) Starter Kit (WIP July '22)
 
 - [Angular](https://angular.io/) client
 - [NestJS](https://nestjs.com/) backend
